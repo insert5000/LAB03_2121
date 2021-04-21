@@ -1,0 +1,702 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{graphicx} % figuras
+% \usepackage{subfigure} % subfiguras
+\usepackage{float} % para usar [H]
+\usepackage{amsmath}
+%\usepackage{txfonts}
+\usepackage{stackrel} 
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{enumerate} % enumerados
+\renewcommand{\labelitemi}{$-$}
+\renewcommand{\labelitemii}{$\cdot$}
+% \author{}
+% \title{Caratula}
+\begin{document}
+
+% Fancy Header and Footer
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
+% \cfoot{}
+% \rfoot{\thepage}
+%
+
+% \usepackage[hidelinks]{hyperref} % CREA HYPERVINCULOS EN INDICE
+  
+% \author{}
+\title{Caratula}
+
+\begin{titlepage}
+    \begin{center}
+    \begin{figure}[htb]
+    \begin{center}
+    \includegraphics[width=3.5cm]{./img/upt.jpg}
+    \end{center}
+    \end{figure}
+    
+    \vspace*{0.15in}
+    \begin{Large}
+    \textbf{UNIVERSIDAD PRIVADA DE TACNA}\\
+    \end{Large}
+    
+    \vspace*{0.1in}
+    \begin{Large}
+    \textbf{FACULTAD DE INGENIERIA} \\
+    \end{Large}
+    
+    \vspace*{0.1in}
+    \begin{Large}
+    \textbf{ESCUELA PROFESIONAL DE INGENIERIA DE SISTEMAS} \\
+    \end{Large}
+    
+    \vspace*{0.5in}
+    \begin{Large}
+    \textbf{TITULO:}\\
+    \end{Large}
+    
+
+\vspace*{0.1in}
+\begin{Large}
+    PRACTICA DE LABORATORIO 03: CREANDO UN REPORTE INTERACTIVO EN POWER BI \\
+\end{Large}
+
+\vspace*{0.3in}
+\begin{Large}
+\textbf{Curso:} \\
+\end{Large}
+
+\vspace*{0.1in}
+\begin{large}
+    Inteligencia De Negocios\\
+\end{large}
+
+\vspace*{0.3in}
+\begin{Large}
+\textbf{Docente:} \\
+\end{Large}
+
+\vspace*{0.1in}
+\begin{large}
+Ing. Patrick Cuadros Quiroga\\
+\end{large}
+
+\vspace*{0.2in}
+\vspace*{0.1in}
+\begin{large}
+\textbf{Alumno:} \\
+\begin{flushleft}
+ Herrera Amezquita, Derian Francisco		\hfill	(2017059489) \\
+
+
+\end{flushleft}
+\end{large}
+\vspace*{0.1in}
+\begin{large}
+Tacna - Perú\\
+\end{large}
+\vspace*{0.1in}
+\begin{large}
+2021\\
+\end{large}
+
+\end{center}
+
+\end{titlepage}
+
+
+
+\tableofcontents % INDICE
+\thispagestyle{empty} % INDICE SIN NUMERO
+\newpage
+\setcounter{page}{1} % REINICIAR CONTADOR DE PAGINAS DESPUES DEL INDICE
+
+
+\section{Objetivos}
+A
+\section{Requerimientos}
+Conocimientos
+\\Para el desarrollo de esta práctica se requerirá de los siguientes conocimientos básicos:
+\\- Conocimientos básicos de administración de base de datos Microsoft SQL Server.
+\\- Conocimientos básicos de SQL.
+\\\\Software
+\\Asimismo se necesita los siguientes aplicativos:
+\\- Microsoft SQL Server 2016 o superior
+\\- Base de datos AdventureWorksLT2016 o superior
+\\- Tener los archivos de recursos del laboratorio.
+\\- Power BI Desktop.
+\\- Tener una cuenta Microsoft registrada en el Portal de Power Bi
+
+\section{Consideraciones Iniciales}
+Generar una carpeta o directorio Power BI en un lugar accesible para guardar los resultados de la práctica.
+
+
+\section{Desarrollo}
+\subsection{Ejercicio 1: Conectando a Power BI a Datos}
+\subsection*{Tarea 1: Conectar a Datos Existentes}
+1. Abrir SQL Server Management Studio, y conectar a la instancia de base de datos (local) utilizando
+autenticación de Windows.
+\begin{center}
+    \includegraphics[width=10cm]{img/1.png}  
+\end{center}
+\begin{center}
+    \includegraphics[width=10cm]{img/2.png}  
+\end{center}
+2. En el menú Archivo (File), en el submenu Abrir (Open), hacer click en Project/Solution, y buscar el archivo
+Project.ssmssln.
+\begin{center}
+    \includegraphics[width=12cm]{img/3.png}
+    \vspace{1cm}  
+\end{center}
+\begin{center}
+    \includegraphics[width=12cm]{img/4.png}  
+\end{center}
+3. En el Explorador de Soluciones, expandir Consultas (Queries), y luego hacer doble click en el archivo Lab
+Exercise 1.sql.
+\begin{center}
+    \includegraphics[width=8cm]{img/5.png}  
+\end{center}
+\begin{center}
+    \includegraphics[width=15cm]{img/6.png}  
+\end{center}
+4. Abrir Power BI Desktop.
+\begin{center}
+    \includegraphics[width=9cm]{img/7.png}  
+\end{center}
+5. En la ventana Power BI Desktop, hacer click en Obtener Data (Get Data).
+\begin{center}
+    \includegraphics[width=15cm]{img/8.png}  
+\end{center}
+6. En el cuadro Obtener Datos, click base de datos Microsoft SQL, y entonces click en Conectar
+\\7. En la ventana base de datos Server database, En Servidor, escribir (local).
+\\8. En Base de Datos (opcional), tipear AdventureWorksLT.
+\\9. Expandir el cuadro Opciones Avanzadas. Copiar el script Task 1 del archivo Lab Exercise 1.sql. y pegar
+la consulta en Power BI, en el cuadro sentencia SQL. Luego presionar OK.
+\begin{center}
+    \includegraphics[width=15cm]{img/9.png}  
+\end{center}
+\begin{center}
+    \includegraphics[width=15cm]{img/10.png}  
+\end{center}
+10. En la ventana de vista preliminar click en Cargar.
+\begin{center}
+    \includegraphics[width=15cm]{img/11.png}  
+\end{center}
+\begin{center}
+    \includegraphics[width=15cm]{img/12.png}  
+\end{center}
+11. En Power BI Desktop, click Obtener Datos y luego click en Mas.
+\begin{center}
+    \includegraphics[width=15cm]{img/13.png}
+    \vspace{2cm}  
+\end{center}
+12. Repetir los pasos del 6 al 10, utilizando el script Task 2.
+\begin{center}
+    \includegraphics[width=15cm]{img/14.png}  
+\end{center}
+\begin{center}
+    \includegraphics[width=15cm]{img/15.png}  
+\end{center}
+\begin{center}
+    \includegraphics[width=15cm]{img/16.png}  
+\end{center}
+13. De regreso en el reporte. Guardar el archivo como AdventureWorksLT Sales.pbix.
+
+\subsection*{Tarea 2: Graficar Datos}
+1. En el panel Campos (Fields), click derecho sobre Query1, Renombrar, tipear Customers y presionar Enter.
+\begin{center}
+    \includegraphics[width=16cm]{img/17.png}  
+\end{center}
+\begin{figure}[!tbp]
+    \centering
+    \includegraphics[width=0.4\textwidth]{img/18.png}
+    \hfill
+    \includegraphics[width=0.4\textwidth]{img/19.png}
+    \caption{}
+  \end{figure}
+2. Para el Query2, hacer lo mismo del paso 1 y colocar el nombre Sales.
+\begin{center}
+    \includegraphics[width=9cm]{img/20.png}
+    \vspace{2cm}  
+\end{center}
+3. Expandir ambas tablas para ver todas las filas.
+\begin{center}
+    \includegraphics[width=5cm]{img/21.png}  
+\end{center}
+4. En la barra de navegación, click Datos (Data).
+\\5. In the Fields pane, click the Customers table, if it is not already selected.
+\begin{center}
+    \includegraphics[width=17cm]{img/22.png}
+    \vspace{1cm}  
+\end{center}
+6. Right-click the NameStyle column, and click Delete.
+\begin{center}
+    \includegraphics[width=5cm]{img/23.png}
+    \vspace{1cm}   
+\end{center}
+7. In the Delete Column dialog box, click Delete.
+\begin{center}
+    \includegraphics[width=12cm]{img/24.png}
+    \vspace{2cm}   
+\end{center}
+8. Repetir el paso 6 y 7 para la columna SalesPerson.
+\begin{center}
+    \includegraphics[width=16cm]{img/25.png}  
+\end{center}
+9. Right-click the CustomerID column, and then click Hide in Report View.
+\begin{center}
+    \includegraphics[width=3cm]{img/26.png}  
+\end{center}
+\begin{center}
+    \includegraphics[width=17cm]{img/27.png}  
+\end{center}
+10. Click the AddressLine1 column header.
+\\11. On the Modeling ribbon, in the Properties group, click Data Category: Uncategorized, and then click
+Address.
+\begin{center}
+    \includegraphics[width=16cm]{img/28.png}  
+\end{center}
+12. Click the City column header.
+\\13. On the Modeling ribbon, in the Properties group, click Data Category: Uncategorized, and then click City.
+\begin{center}
+    \includegraphics[width=15.5cm]{img/116.png}  
+\end{center}
+14. Click the StateProvince column header.
+\\15. On the Modeling ribbon, in the Properties group, click Data Category: Uncategorized, and then click State or
+Province.
+\begin{center}
+    \includegraphics[width=15cm]{img/117.png}  
+\end{center}
+16. Click en el encabezado de columna CountryRegion.
+\\17. On the Modeling ribbon, in the Properties group, click Data Category: Uncategorized, and then click
+Country/Region.
+\begin{center}
+    \includegraphics[width=15cm]{img/118.png}  
+\end{center}
+18. Click en el encabezado de columna PostalCode.
+\\19. On the Modeling ribbon, in the Properties group, click Data Category: Uncategorized, and then click Postal
+Code.
+\begin{center}
+    \includegraphics[width=15.5cm]{img/119.png}  
+\end{center}
+20. On the Modeling ribbon, in the Calculations group, click New Column, and then in the formula bar, type the
+following expression and press Enter:
+\begin{center}
+    \includegraphics[width=7cm]{img/113.png}  
+\end{center}
+\begin{center}
+    \includegraphics[width=17cm]{img/31.png}  
+\end{center}
+21. In the Fields pane, click Sales.
+\\22. Right-click the RevisionNumber column, and click Delete.
+\begin{center}
+    \includegraphics[width=10cm]{img/32.png} 
+    \vspace{1cm}  
+\end{center}
+23. In the Delete Column dialog box, click Delete.
+\begin{center}
+    \includegraphics[width=10cm]{img/33.png} 
+    \vspace{1cm} 
+\end{center}
+24. Realizar el paso 23 y 34 para la columna SalesOrderNumber.
+\\25. Right-click the CustomerID column, and then click Hide in Report View.
+\begin{center}
+    \includegraphics[width=4cm]{img/30.png}  
+    \vspace{2cm} 
+\end{center}
+26. Realizar el paso 26 para las columnas SalesOrderID y SalesOrderDetailID.
+\begin{center}
+    \includegraphics[width=4cm]{img/34.png}  
+    \vspace{2cm} 
+\end{center}
+27. On the Modeling ribbon, in the Calculations group, click New Column, and then in the formula bar, type the
+following expression and press Enter:
+\begin{center}
+    \includegraphics[width=7cm]{img/114.png}  
+\end{center}
+\begin{center}
+    \includegraphics[width=17cm]{img/35.png}  
+\end{center}
+28. Click the LineTotal column header.
+\begin{center}
+    \includegraphics[width=15cm]{img/37.png}  
+\end{center}
+29. On the Modeling ribbon, in the Formatting group, click Format: General, point to Currency, and then click \$
+English (United States).
+\begin{center}
+    \includegraphics[width=17.5cm]{img/36.png}
+    \vspace{1cm}  
+\end{center}
+30. On the Modeling ribbon, in the Calculations group, click New Measure, and then in the formula bar, type the
+following expression and press Enter.
+\begin{center}
+    \includegraphics[width=6cm]{img/115.png}  
+\end{center}
+\begin{center}
+    \includegraphics[width=17.5cm]{img/38.png}
+    \vspace{2cm}  
+\end{center}
+31. Click Save, and then leave Power BI Desktop open for the next task.
+
+\subsection*{Tarea 2: Graficar Datos}
+1. In File Explorer, and then open the States.xlsx file.
+\begin{center}
+    \includegraphics[width=13cm]{img/39.png}  
+    \vspace{1cm} 
+\end{center}
+2. In the States worksheet, select all of the values in the two columns, and then press Ctrl+C.
+\begin{center}
+    \includegraphics[width=16cm]{img/40.png} 
+    \vspace{2cm}  
+\end{center}
+3. In Power BI Desktop, on the Home ribbon, click Enter Data.
+\begin{center}
+    \includegraphics[width=12cm]{img/41.png}  
+\end{center}
+4. In the Create Table dialog box, click in the table, and then press Ctrl+V. Power BI detects that thefirst row is
+a column header.
+\\5. In the Name box, type Sales by State, and then click Load.
+\begin{center}
+    \includegraphics[width=13cm]{img/42.png}  
+\end{center}
+\begin{center}
+    \includegraphics[width=5cm]{img/43.png}  
+\end{center}
+6. On the Home ribbon, click Get Data, and then click Web.
+\begin{center}
+    \includegraphics[width=6cm]{img/44.png}  
+\end{center}
+7. In the From Web dialog box, in the URL box type
+\href{http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations}, and then click OK.
+\begin{center}
+    \includegraphics[width=17cm]{img/45.png}  
+\end{center}
+8. In the Navigator dialog box, select Codes and abbreviations for U.S. states, territories and other
+regions, and then click Load.
+\begin{center}
+    \includegraphics[width=15cm]{img/46.png}  
+\end{center}
+9. In the Fields pane, click Codes and abbreviations for U.S. states, territories and other regions to
+display the data. The table has 26 rows at the bottom that are not needed.
+\begin{center}
+    \includegraphics[width=17cm]{img/47.png}  
+\end{center}
+10. On the Home ribbon, in the External Data group, click Edit Queries, then click Edit Queries.
+\begin{center}
+    \includegraphics[width=5cm]{img/48.png} 
+    \vspace{1cm}  
+\end{center}
+11. In Query Editor, in the Queries pane, click Codes and abbreviations for U.S. states, territories and other
+regions.
+\begin{center}
+    \includegraphics[width=17cm]{img/49.png}  
+    \vspace{2cm} 
+\end{center}
+12. On the Home ribbon, click Reduce Rows, click Remove Rows, and then click Remove Bottom Rows.
+\begin{center}
+    \includegraphics[width=15cm]{img/50.png}  
+\end{center}
+13. In the Remove Bottom Rows dialog box, in the Number of rows box, type 26, and then click OK.
+\begin{center}
+    \includegraphics[width=10cm]{img/51.png}  
+\end{center}
+\begin{center}
+    \includegraphics[width=17cm]{img/52.png}  
+\end{center}
+14. Click the ANSI2 column header, and then hold down the Ctrl key while selecting all of the columns to the
+right. This selects multiple rows.
+\begin{center}
+    \includegraphics[width=17cm]{img/53.png}  
+\end{center}
+15. Still holding down Ctrl, click the Name and status of region2 and Header columns to include this in the
+selection.
+\begin{center}
+    \includegraphics[width=17cm]{img/54.png}
+    \vspace{2cm}   
+\end{center}
+16. On the Home ribbon, click Manage Columns, click Remove Columns, and then click Remove Columns.
+\begin{center}
+    \includegraphics[width=17cm]{img/55.png}  
+\end{center}
+17. In the Query Settings pane, under Properties, in the Name box, type States with Codes, and then press
+Enter.
+\begin{center}
+    \includegraphics[width=10cm]{img/56.png}  
+\end{center}
+\begin{center}
+    \includegraphics[width=8cm]{img/57.png}  
+\end{center}
+18. On the Home ribbon, in the Transform group, click Use First Row as Headers.
+\\19. Right-click the United States of America column header, click Rename, type State Name, and then press
+Enter.
+\begin{center}
+    \includegraphics[width=14cm]{img/59.png}
+    \vspace{2cm}   
+\end{center}
+20. Right-click the US USA 840 column header, click Rename, type State Code Long, and then press Enter.
+\begin{center}
+    \includegraphics[width=13cm]{img/60.png}  
+\end{center}
+21. Right-click the US column header, click Rename, type State Code Short, and then press Enter.
+\begin{center}
+    \includegraphics[width=13cm]{img/61.png}  
+\end{center}
+22. In the Queries pane, click Sales by State.
+\begin{center}
+    \includegraphics[width=15cm]{img/62.png}  
+\end{center}
+23. On the Home ribbon, click Combine, and then click Merge Queries.
+\begin{center}
+    \includegraphics[width=18cm]{img/63.png}  
+\end{center}
+24. In the Merge dialog box, in the Sales by State table, click the States column.
+\\25. In the list, click States with Codes, click the State Name column, and then click OK. The new column is
+added to the table and contains the merged States with Codes table.
+\begin{center}
+    \includegraphics[width=12cm]{img/64.png}  
+\end{center}
+\begin{center}
+    \includegraphics[width=18cm]{img/65.png}
+    \vspace{2cm}   
+\end{center}
+26. In the column header, click the Expand icon, clear (Select All Columns), select State Code Short,
+and then click OK. The column now shows just the state codes.
+\begin{center}
+    \includegraphics[width=14cm]{img/66.png}  
+\end{center}
+\begin{center}
+    \includegraphics[width=17cm]{img/67.png}
+    \vspace{2cm}   
+\end{center}
+27. Right-click the column, click Rename, type State Code, and then press Enter.
+\begin{center}
+    \includegraphics[width=14cm]{img/68.png}  
+\end{center}
+28. On the File menu, click Close \& Apply.
+\begin{center}
+    \includegraphics[width=14cm]{img/69.png}  
+\end{center}
+29. In the Fields pane, right-click States with Codes, and then click Hide in Report View.
+\begin{center}
+    \includegraphics[width=5cm]{img/70.png}  
+\end{center}
+
+\subsection{Ejercicio 2: Construyendo Reportes en Power BI}
+\subsection*{Tarea 1: Crear un Gráfico}
+1. En Power BI Desktop, en la barra derecha de navegación, hacer click en Reporte (Report).
+\begin{center}
+    \includegraphics[width=17cm]{img/71.png}
+\end{center}
+2. En el panel de Visualizaciones (Visualizations), hacer click en Gauge.
+\begin{center}
+    \includegraphics[width=6cm]{img/72.png}
+\end{center}
+3. Arrastar el campo LineTotal de la table Sales a la propiedad Valor (Value) del objeto gauge.
+\begin{center}
+    \includegraphics[width=15cm]{img/73.png}
+    \vspace{1cm}
+\end{center}
+4. Arrastrar la medida TargetSales de la table Sales a la propiedad Valor destino (Target value) del objeto
+gauge.
+\begin{center}
+    \includegraphics[width=17cm]{img/74.png}
+\end{center}
+5. Hacer click Format, exppandir Gauge axis, and then in the Max box, type 146000.
+\begin{center}
+    \includegraphics[width=7cm]{img/75.png}
+    \vspace{1cm}
+\end{center}
+6. Expandir Titulo (Title), en el cuadro Texto de Titulo (Title Text), tipear Meta de Ventas (Target Sales), y
+luego hacer click en Center.
+\begin{center}
+    \includegraphics[width=4cm]{img/76.png}
+\end{center}
+\begin{center}
+    \includegraphics[width=14cm]{img/77.png}
+    \vspace{1cm}
+\end{center}
+7. Click the report canvas, and then drag the CompanyName field from the Customers table onto the report.
+Power BI automatically creates a table.
+\begin{center}
+    \includegraphics[width=18cm]{img/78.png}
+    \vspace{1cm}
+\end{center}
+8. Arrastar the LineTotal field from the Sales table onto the report.
+\begin{center}
+    \includegraphics[width=18cm]{img/79.png}
+    \vspace{2cm}
+\end{center}
+9. Make sure that the table has focus, and then in the Visualizations pane, click Pie chart.
+\begin{center}
+    \includegraphics[width=9cm]{img/80.png}
+\end{center}
+10. Expand the chart to make all of the company names visible by using the resizer handles on the edge
+of the chart.
+\begin{center}
+    \includegraphics[width=17cm]{img/81.png}
+\end{center}
+11. With the focus still on the pie chart, click Format, and then expand Title.
+\\12. In the Title Text box, type Top Selling Customers, and then click Center.
+\begin{center}
+    \includegraphics[width=15cm]{img/82.png}
+\end{center}
+13. Arrastar el campo MainCategory de la tabla Sales table onto the report canvas. Power BI creates a table.
+\begin{center}
+    \includegraphics[width=16cm]{img/84.png}
+\end{center}
+14. Arrastar el campo OrderQty dentro de la tabla.
+\\15. In the Visualizations pane, click Stacked bar chart.
+\begin{center}
+    \includegraphics[width=15cm]{img/85.png}
+\end{center}
+16. In the Visualizations pane, click Fields.
+\\17. Drag the OrderQty field onto the Color saturation property. Notice that the colors change.
+\begin{center}
+    \includegraphics[width=5cm]{img/86.png}
+\end{center}
+18. In the Visualizations pane, click Analytics, expand Constant Line, and then click Add.
+\\19. In the Value box, type 500.
+\\20. Change Color to red, toggle Data label to On, and then change the color to red.
+\begin{center}
+    \includegraphics[width=15cm]{img/87.png}
+\end{center}
+21. In the Visualizations pane, click Format, and expand Title.
+\\22. In the Title Text box, type Orders by Main Category, and then click Center.
+\begin{center}
+    \includegraphics[width=15cm]{img/88.png}
+\end{center}
+23. Click the report canvas to give it focus, and then in the Visualizations pane, click Donut chart.
+\begin{center}
+    \includegraphics[width=15cm]{img/89.png}
+    \vspace{1cm}
+\end{center}
+24. In the Sales table, select MainCategory and LineTotal.
+\begin{center}
+    \includegraphics[width=15cm]{img/90.png}
+    \vspace{1cm}
+\end{center}
+25. In the Visualizations pane, click Format, and then expand Title.
+\\26. In the Title Text box, type Sales by Main Category, and then click Center.
+\begin{center}
+    \includegraphics[width=17cm]{img/91.png}
+    \vspace{1cm}
+\end{center}
+27. Drag the Product field from the Sales table onto the report canvas. Power BI creates a table.
+\begin{center}
+    \includegraphics[width=17cm]{img/92.png}
+    \vspace{1cm}
+\end{center}
+28. Drag the LineTotal field from the Sales table onto the products table chart.
+\begin{center}
+    \includegraphics[width=17cm]{img/94.png}
+\end{center}
+29. In the Sales table, select the MainCategory field.
+\\30. In the Visualizations pane, click Fields.
+\\31. In the Filters pane, expand LineTotal(All).
+\\32. In the Show items when the value list, select is greater than, and then in the box below, type 32000.
+\\33. Hacer click en Aplicar filtro (Apply filter).
+\begin{center}
+    \includegraphics[width=17cm]{img/95.png}
+    \vspace{1cm}
+\end{center}
+34. Expand MainCategory(All), and then select Bikes.
+\begin{center}
+    \includegraphics[width=6cm]{img/96.png}
+\end{center}
+35. In the Visualizations pane, click Stacked column chart.
+\begin{center}
+    \includegraphics[width=17cm]{img/97.png}
+    \vspace{1cm}
+\end{center}
+36. In the Visualizations pane, click Format, and then expand Title.
+\\37. In the Title Text box, type Top 10 Selling Bikes, and then click Center.
+\begin{center}
+    \includegraphics[width=10cm]{img/98.png}
+    \vspace{1cm}
+\end{center}
+38. In the Visualizations pane, click Analytics, expand Constant Line, and then click Add.
+\\39. In the Value box, type 35000, and then set Color to red.
+\\40. Toggle Data label to On, and then set Color to red.
+\begin{center}
+    \includegraphics[width=10cm]{img/99.png}
+    \vspace{1cm}
+\end{center}
+41. Expand the chart to fill the remaining space on the report canvas. If necessary, move your visuals
+around to make them fit.
+\begin{center}
+    \includegraphics[width=17cm]{img/100.png}
+\end{center}
+42. Click Save
+
+\subsection*{Tarea 2: Crear una Visualización de Mapa}
+1. At the bottom of the report, click the + icon to add a new page.
+\begin{center}
+    \includegraphics[width=15cm]{img/101.png}
+\end{center}
+2. In the Fields pane, in the Customers table, select the City field. Power BI adds a map to the report.
+\begin{center}
+    \includegraphics[width=16cm]{img/102.png}
+\end{center}
+3. In the Fields pane, in the Sales table, select the LineTotal field.
+\begin{center}
+    \includegraphics[width=16cm]{img/103.png}
+\end{center}
+4. Using the grabber tool on the right side of the chart, resize the map to show all of the bubbles.
+\begin{center}
+    \includegraphics[width=17cm]{img/104.png}
+\end{center}
+5. Notice that the bubbles are proportionally sized to represent the data.
+\\6. In the Visualizations pane, click Format, and then expand Title.
+\\7. In the Title Text box, type World Sales by City, and then click Center.
+\begin{center}
+    \includegraphics[width=17cm]{img/105.png}
+\end{center}
+8. Click the report canvas, and then in the Sales by State table, select the State Code column. Power BI
+automatically adds a map.
+\begin{center}
+    \includegraphics[width=16cm]{img/106.png}
+\end{center}
+9. In the Sales by State table, select the SalesYTD column.
+\begin{center}
+    \includegraphics[width=16cm]{img/107.png}
+\end{center}
+10. In the Visualizations pane, click Filled Map. Using the grabber tool on the right side and at the bottom of
+the chart, resize the map to show all the states.
+\begin{center}
+    \includegraphics[width=17cm]{img/108.png}
+    \vspace{6cm}
+\end{center}
+11. Notice that the sales cluster in one area.
+\\\\\\12. Position the cursor on California(CA) to see the sales figure. The value has not been formatted as currency.
+\begin{center}
+    \includegraphics[width=13cm]{img/109.png}
+\end{center}
+14. In the Sales by State table, click the SalesYTD column.
+\\15. On the Modeling ribbon, select Format:General, click Currency, and then select \$ English (United
+Stated).
+\begin{center}
+    \includegraphics[width=17cm]{img/110.png}
+    \vspace{1cm}
+\end{center}
+16. Position the cursor on California(CA) on the map, and notice that the value has been formatted.
+\begin{center}
+    \includegraphics[width=13cm]{img/111.png}
+\end{center}
+17. In the Visualizations pane, click Format, and then expand Title.
+18. In the Title Text box, type Sales by State, and then click Center.
+\begin{center}
+    \includegraphics[width=12cm]{img/112.png}
+\end{center}
+19. Click Save, and then leave the report open for the next exercise.
+
+\section{Resultados}
+Después de este ejercicio, debería haber creado un informe que tenga gráficos visuales y esté listo para publicar.
+al servicio Power BI.
+
+\end{document}
+
